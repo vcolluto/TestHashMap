@@ -17,8 +17,10 @@ public class Main {
 		
 		System.out.println("Auto inserite:");
 		for(String t:elencoAuto.keySet())	//scorre tutte le targhe (chiavi)
-			System.out.println(elencoAuto.get(t));
+			System.out.println(t+" - " +elencoAuto.get(t));
 		
+		
+		//ricerca per chiave
 		System.out.println("Inserisci la targa: ");
 		String targa=sc.nextLine();
 		if (elencoAuto.containsKey(targa))
@@ -26,7 +28,15 @@ public class Main {
 		else
 			System.out.println("Auto non trovata!");
 		
+		//ricerca per valore
+		System.out.println("Inserisci il modello dell'auto: ");
+		String modello=sc.nextLine();
+		if (elencoAuto.containsValue(modello))
+			System.out.println("Auto trovata");	
+		else
+			System.out.println("Auto non trovata!");
 		
+
 		
 		sc.close();
 
